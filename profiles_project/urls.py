@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+admin.site.site_header = 'Septian Django Project'
+admin.site.index_title = 'Septian Administration'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('profiles_api.urls'))

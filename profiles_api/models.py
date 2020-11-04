@@ -67,3 +67,7 @@ class ProfileFeedItem(models.Model):
     def __str__(self):
         """Return the model as a string"""
         return self.status_text
+class map(models.Model):
+    """Database model for users in the system"""
+    url = models.CharField(max_length=1000, unique=True)
+    name = models.CharField(max_length=255)

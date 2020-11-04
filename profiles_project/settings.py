@@ -25,7 +25,7 @@ SECRET_KEY = '-v=t@+^(^cu7a-vwi)$ubdndsddk92mo2-1#i_@3rr!cb)m4fk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django.contrib.gis',
     'rest_framework',
     'rest_framework.authtoken',
     'profiles_api',
@@ -79,8 +80,19 @@ WSGI_APPLICATION = 'profiles_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'postgres',
+        # 'USER': 'postgres',
+        # 'PASSWORD': 'postgres',
+        # 'HOST': 'localhost',
+        # 'PORT': '5432',
+        'NAME': 'idsd',
+        'USER': 'redbit',
+        'PASSWORD': 'minletmein01!',
+        'HOST': 'anoa.redbit.co.id',
+        'PORT': '5432',
     }
 }
 
